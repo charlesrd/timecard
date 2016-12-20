@@ -1,5 +1,5 @@
 # timecard
-An advanced timecard application that keps track of employee hours and displays reports.
+An advanced timecard application that keeps track of employee hours and displays reports.
 
 ----------
 
