@@ -1,0 +1,36 @@
+/* CSS stylesheet for AMS Timecard Admin Area */
+
+#clock-time, #view-history-thumbnail-container {
+	display: none;
+}
+
+
+/* Media Styles */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.thumbnail {
+		height: 80px;
+	}
+
+	.thumbnail span {
+		font-size: 1.2em;
+	}
+
+	.thumbnail h3 {
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 513px) and (max-width: 767px) {
+	#user-table {
+		font-size: 0.9em;
+	}
+
+	thead tr td {
+		font-size: 1.0em;
+	}
+
+	.table-total h3 {
+		font-size: 1.3em;
+	}
+}

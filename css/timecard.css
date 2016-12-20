@@ -1,0 +1,1808 @@
+/* CSS stylesheet for AMS Timecard */
+
+/* Import Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);
+
+/* Global Styles */
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+body {
+  background: url(../img/blue-clock-bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.container-fluid#main {
+	min-height: 100%;
+}
+
+h1 {
+	letter-spacing: 0px;
+	font-weight: 400;
+	font-family: "FontAwesome";
+}
+
+hr {
+	margin: 0px;
+	padding-bottom: 5px;
+}
+
+
+/* Global Classes */
+
+
+.margin-top-10 {margin-top: 10px;}
+
+
+/* Element Styles */
+
+#top-nav {
+	/*height: 30px;*/
+}
+
+#top-nav .container {
+	width: 100%;
+}
+
+.navbar {
+	margin-bottom: 0;
+	background: #333;
+	color: #fff;
+}
+
+.navbar-default .navbar-nav {
+	letter-spacing: 0px;
+	font-family: "FontAwesome";
+	/*height: 30px;*/
+}
+
+.navbar-default .navbar-nav > li > h5 {
+	background: #333;
+	color: #000;
+	font-size: 1.1em;
+}
+
+.navbar-default .navbar-nav > li > h4 {
+	background: #333;
+	color: #000;
+	font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > li > a {
+	background: #333;
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background: #333;
+	color: #fff;
+	font-size: 1.3em;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover {
+	background: #e0e0e0;
+	color: #fff;
+}
+
+.navbar-toggle {
+	position: relative;
+	right: -40px;
+}
+
+.settings:hover {
+	background: #888;
+	color: #fff;
+}
+
+#user-icon {
+	font-size: 2.3em;
+	position: relative;
+	top: 20px;
+}
+
+#top-links {
+	background: #333;
+	color: #fff;
+}
+
+#top-nav .navbar-header {
+	width: 100%;
+}
+
+#header-title {
+	position: absolute;
+	top: -20px;
+}
+
+#header-title a {
+	font-size: 0.5em;
+}
+
+#header-title a:hover {
+	color: #fcff00;
+}
+
+#header-title span {
+	color: #67b2ff;
+}
+
+#header-title:hover span {
+	color: #67b2ff;
+}
+
+
+.header-link {
+	font-size: 0.7em;
+	font-weight: 600;
+}
+
+
+#taskButton {
+	background: #333;
+	color: #fff;
+	font-size: 1.1em;
+}
+
+#taskButton:hover {
+	background: #888;
+	color: #fff;
+}
+
+#actionsButton {
+	background: #333;
+	color: #fff;
+	font-size: 1.1em;
+}
+
+#actionsButton:hover {
+	background: #888;
+	color: #fff;
+}
+
+#clock-time, #edit-time {
+	cursor: pointer;
+}
+
+#remote-mode-container {
+	height: 100%;
+	max-height: 100%;
+}
+
+#remote-mode-container .row {
+	width: 100%;
+	height: 48px;
+	max-height: 48px;
+}
+
+.remote-access-link {
+	background: #ff0000 !important;
+	color: #ffffff;
+	font-weight: 700;
+}
+
+#title-col {
+	width: 200px;
+}
+
+#remote-mode-col {
+	background: #ff8383;
+	height: 100%;
+	max-height: 100%;
+}
+
+#remote-mode-header {
+	position: relative;
+	top: 10px;
+	color: #000;
+	font-size: 1.6em;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+#remote-mode-top-message {
+	position: relative;
+	top: 10px;
+	color: #444;
+	font-size: 1.3em;
+	margin-left: 20px;
+	width: 100%;
+}
+
+.thumbnail span {
+	font-size: 3.0em;
+}
+
+.thumbnail h3 {
+	font-size: 1.6em;
+}
+
+#login-container {
+	margin-top: 10%;
+}
+
+#login-row {
+	width: 100%;
+}
+
+#login-header {
+	font-size: 4.0em;
+	font-weight: 800;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: Helvetica, Arial, sans-serif;*/
+	color: rgba(55,149,237,0.8);
+	min-width: 300px;
+	text-align: left;
+}
+
+#login {
+	/*background: rgba(255,255,255,0.7);*/
+	width: 50%;
+}
+
+#login-button {
+	position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: rgba(55,149,237,1);
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 700;
+    font-size: 2em;
+    display: block;
+    padding: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px  rgba(7,90,244,1), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(7,90,244,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(7,90,244,1), 0px 9px 25px rgba(0,0,0,.7);
+	width: 160px;
+	text-align: center;
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
+
+#login-button:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(7,90,244,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(7,90,244,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(7,90,244,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+
+#login input[type="text"] {
+	margin-bottom: 10px;
+}
+
+#login-message {
+	position: relative;
+	top: 10px;
+}
+
+.sponsor {
+	height: 100px;
+	width: 120px;
+	margin-top: 10px;
+	margin-left: 10px;
+	border-radius: 5px 20px 5px;
+	border: 3px solid #ff7878;
+}
+
+.fade {
+	opacity: 0.6;
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+	opacity: 1.0;
+}
+
+.inset-text {
+    /* Shadows are visible under slightly transparent text color */
+    /*color: rgba(10,60,150, 0.8);*/
+    text-shadow: 1px 2px 4px #def, 0 0 0 #000, 1px 2px 4px #def;
+}
+/* Don't show shadows when selecting text */
+::-moz-selection { background: #5af; color: #fff; text-shadow: none; }
+::selection { background: #5af; color: #fff; text-shadow: none; }
+
+
+/* User Page Styles */
+
+#user-container {
+	position: fixed;
+	top: 50px;
+	left: 0px;
+	background: rgba(200,200,200,0.8);
+}
+
+#user-table-div {
+	overflow: hidden;
+}
+
+#user-table {
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	background: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+
+#avg-start-time-message {
+	font-size: 0.7em;
+	padding: 5px;
+}
+
+.bg-error {
+	background: #ff0000;
+	color: #ffffff;
+}
+
+.bg-black {
+	background: #333333;
+	color: #ffffff;
+}
+
+thead tr td {
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+.table-header {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.table-sub-header {
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.table-total h3 {
+	font-size: 1.6em;
+	font-weight: 700;
+	margin-right: 20px;
+}
+
+.thumbnail {
+	margin-top: 10px;
+}
+
+.thumbnail span {
+	display: block;
+	text-decoration: none;
+}
+
+.thumbnail:hover {
+	text-decoration: none;
+}
+
+.thumbnail:hover h3 {
+	text-decoration: underline;
+}
+
+#clock-out-modal .modal-dialog {
+	width: 320px;
+}
+
+.modal-label {
+	margin-top: 10px;
+}
+
+#view-history-modal .modal-dialog {
+	width: 330px;
+}
+
+#view-history-row {
+	height: 210px;
+}
+
+#change-day-modal .modal-dialog {
+	width: 330px;
+}
+
+#change-day-row {
+	height: 210px;
+}
+
+#change-day-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+#change-week-modal .modal-dialog {
+	width: 330px;
+}
+
+#change-week-row {
+	height: 210px;
+}
+
+#change-user-modal .modal-dialog {
+	width: 420px;
+}
+
+#change-user-row {
+	height: 400px;
+	overflow-y: auto;
+}
+
+#view-report-modal .modal-dialog {
+	width: 420px;
+}
+
+#view-report-row {
+	height: 400px;
+	overflow-y: auto;
+}
+
+#vacation-time-modal .modal-dialog {
+	width: 440px;
+}
+
+#vacation-time-row {
+	margin-top: 10px;
+}
+
+#holiday-time-modal .modal-dialog {
+	width: 440px;
+}
+
+#holiday-time-row {
+	margin-top: 10px;
+}
+
+#personal-time-modal .modal-dialog {
+	width: 440px;
+}
+
+#personal-time-row {
+	margin-top: 10px;
+}
+
+#sick-time-modal .modal-dialog {
+	width: 440px;
+}
+
+#sick-time-row {
+	margin-top: 10px;
+}
+
+#edit-time-modal .modal-dialog {
+	width: 440px;
+}
+
+#edit-vacation-modal .modal-dialog {
+	width: 440px;
+}
+
+#edit-holiday-modal .modal-dialog {
+	width: 440px;
+}
+
+#edit-personal-modal .modal-dialog {
+	width: 440px;
+}
+
+#edit-sick-modal .modal-dialog {
+	width: 440px;
+}
+
+#account-settings-modal .modal-dialog {
+	width: 640px;
+}
+
+#add-user-modal .modal-dialog {
+	width: 440px;
+}
+
+#message-board-modal .modal-dialog {
+	width: 440px;
+}
+
+#opinion-board-modal .modal-dialog {
+	width: 800px;
+}
+
+#employee-message-modal .modal-dialog {
+	width: 800px;
+}
+
+#ip-address-modal .modal-dialog {
+	width: 440px;
+}
+
+#request-personal-time-modal-button {
+	margin-top: 10px;
+}
+
+#request-personal-time-modal .modal-dialog {
+	width: 600px;
+}
+
+#request-personal-time-row {
+	min-height: 380px;
+}
+
+#request-vacation-time-modal .modal-dialog {
+	width: 600px;
+}
+
+#company-settings-modal .modal-dialog {
+	width: 800px;
+}
+
+#company-settings-row {
+	min-height: 250px;
+	max-height: 400px;
+	overflow-y: auto;
+}
+
+.ip-row {
+	padding-bottom: 10px;
+}
+
+#warning-messages-modal .modal-dialog {
+	width: 400px;
+}
+
+#do-payroll-modal .modal-dialog {
+	width: 440px;
+}
+
+#request-personal-time-row {
+	height: 170px;
+}
+
+#span-request-personal-time {
+	position: relative;
+	top: 10px;
+}
+
+#request-vacation-time-row {
+	height: 170px;
+}
+
+#span-request-vacation-time {
+	position: relative;
+	top: 10px;
+}
+
+td[id^="cell"], td[id^="vacation"], td[id^="holiday"], td[id^="personal"], td[id^="sick"] {
+	cursor: pointer;
+}
+
+#edit-time, #edit-vacation, #edit-holiday, #edit-personal, #edit-sick {
+	display: none;
+}
+
+/*#clock-time {*/
+.no h1 {
+	/* How pronounced should the 3D effects be */
+	perspective: 800px;
+	-webkit-perspective: 800px;
+	margin:0 auto;
+	border-radius:6px;
+	position:relative;
+}
+
+/*#clock-in, #clock-out {*/
+.no {
+	/* Enable 3D transforms */
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+
+	/* We are using two separate divs for the front and back of the
+	   phone. This will hide the divs when they are flipped, so that the
+	   opposite side can be seen:  */
+
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+
+	width: 100%;
+
+	position: absolute;
+	top: 50%;
+/*	left: 50%;*/
+	margin: 10px 0 0 -40px;
+	/* Animate the transitions */
+	transition:0.8s;
+}
+
+/*#clock-out {*/
+.no a {
+	/* The back side is flipped 180 deg by default */
+	transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+
+	background-position:right center;
+}
+
+.rotateIn {
+	/* When the container is hovered, flip the front side and hide it .. */
+	transform:rotateY(180deg);
+	-webkit-transform:rotateY(180deg);
+}
+
+.rotateOut {
+	/* .. at the same time flip the back side into visibility */
+	transform:rotateY(360deg);
+	-webkit-transform:rotateY(360deg);
+}
+
+.caret {
+	margin-left: 8px;
+	border-bottom-width: 0px;
+    border-top: 5px solid #000000;
+}
+
+.caret.caret-reversed {
+    border-top-width: 0px;
+    border-bottom: 5px solid #000000;
+}
+
+#forgot-thumbnail {
+	background: #dd2323;
+	color: #ddd;
+}
+
+#forgot-thumbnail:hover {
+	background: #ff0000;
+	color: #fff;
+}
+
+#forgot-row {
+	height: 120px;
+	display: none;
+	font-weight: 700;
+	font-size: 1.6em;
+	color: #fff;
+}
+
+#forgot-row div {
+	margin-top: 30px;
+}
+
+.forgot {
+	background: #ff3030 !important;
+	color: #fff;
+}
+
+.forgot a {
+	background: #ff3030 !important;
+	color: #b7f6ff;
+}
+
+.report-row td {
+	max-height: 50px;
+}
+
+.forgot-report {
+	cursor: pointer;
+}
+
+#change-week-link {
+	font-size: 0.7em;
+	font-weight: 600;
+	position: relative;
+	left: -45%;
+}
+
+#print-report-button {
+	font-size: 0.7em;
+	font-weight: 600;
+	position: relative;
+	left: -40%;
+	color: #000;
+}
+
+#print-report-button:hover {
+	color: #006ed4;
+	cursor: pointer;
+}
+
+#print-instructions {
+	color: #ffff00;
+	font-size: 0.9em;
+	font-weight: 700;
+	border-radius: 3px;
+	border: 2px solid #000;
+	position: absolute;
+	top: 10px;
+	left: 10%;
+}
+
+@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake {
+	display: inline-block;
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 5.0s;
+	-webkit-transform-origin: 50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	/*-webkit-animation-iteration-count: 1;*/
+	-webkit-animation-timing-function: linear;
+}
+
+.vacation-time-time-label span {
+	position: relative;
+	top: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.vacation-time-dropdown {
+	width: 100%;
+}
+
+.vacation-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#vacation-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-vacation-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-vacation-time {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#vacation-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+.holiday-time-time-label span {
+	position: relative;
+	top: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.holiday-time-dropdown {
+	width: 100%;
+}
+
+.holiday-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#holiday-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-holiday-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-holiday-time {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#holiday-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+.personal-time-time-label span {
+	position: relative;
+	top: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.personal-time-dropdown {
+	width: 100%;
+}
+
+.personal-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#personal-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-personal-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-personal-time {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#personal-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+.sick-time-time-label span {
+	position: relative;
+	top: 10px;
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.sick-time-dropdown {
+	width: 100%;
+}
+
+.sick-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#sick-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-sick-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-sick-time {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#sick-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+#request-personal-time-datepicker {
+	margin-left: 140px;
+}
+
+#request-personal-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+#request-vacation-time-datepicker {
+	margin-left: 140px;
+}
+
+#request-vacation-time-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+.do-payroll-dropdown {
+	width: 100%;
+}
+
+.do-payroll-dropdown:hover {
+	background: #a0cfef;
+}
+
+#do-payroll-start-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+#do-payroll-end-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-payroll-start-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+.main-payroll-end-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#do-payroll-start-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+#do-payroll-end-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+#employee-list-table-div {
+	max-height: 270px;
+	overflow-y: auto;
+}
+
+#employee-list-table {
+	width: 100%;
+}
+
+.employee-list-hr, .employee-list-min {
+	width: 100%;
+}
+
+.employee-list-name {
+	width: 60%;
+}
+
+#account-settings-row .row:nth-child(even) {
+	background: #e9e9e9;
+}
+
+#account-settings-row input {
+	width: 100%;
+}
+
+#add-user-row .row:nth-child(even) {
+	background: #e9e9e9;
+}
+
+#add-user-row input {
+	width: 100%;
+}
+
+#username {
+	text-transform: lowercase;
+}
+
+#payrate-row {
+	background: #a6daff !important;
+}
+
+#salary-row {
+	background: #5eff43 !important;
+}
+
+#span-errors {
+	position: relative;
+	top: 10px;
+}
+
+#message-board-text-title {
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+#message-board-text {
+	font-size: 1.3em;
+}
+
+#message-board-textarea {
+	font-size: 1.3em;
+	height: 200px;
+}
+
+#opinion-board-self-label {
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+#opinion-board-company-label {
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+#opinion-board-text {
+	font-size: 1.3em;
+}
+
+#opinion-board-self-textarea, #opinion-board-company-textarea {
+	margin-bottom: 15px;
+	font-size: 1.3em;
+	height: 150px;
+}
+
+#employee-message-textarea {
+	font-size: 1.3em;
+	height: 150px;
+}
+
+.error-input {
+	border: 1px solid #ff0000;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.warning-alert-text {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.start-time-dropdown {
+	width: 100%;
+}
+
+.start-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#start-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-start-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-start-date {
+	display: none;
+}
+
+#start-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+.end-time-dropdown {
+	width: 100%;
+}
+
+.end-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#end-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-end-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-end-date {
+	display: none;
+}
+
+#end-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+
+.birth-time-dropdown {
+	width: 100%;
+}
+
+.birth-time-dropdown:hover {
+	background: #a0cfef;
+}
+
+#birth-time-datepicker {
+	margin-top: 10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+}
+
+.main-birth-header {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 1.0em;
+	font-weight: 700;
+}
+
+#main-birth-date {
+	display: none;
+}
+
+#birth-time-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+
+.has-key {
+	min-width: 80px;
+}
+
+.alarm-code {
+	text-transform: uppercase;
+}
+
+.employee-review-dropdown {
+	min-width: 250px !important;
+}
+
+.employee-review-datepicker-container {
+	width: 150px;
+	display: none;
+}
+
+.review-note-input {
+	min-width: 100px;
+}
+
+.review-note-button {
+	margin-top: 7px;
+	min-width: 60px;
+	color: #ffffff;
+}
+
+
+.employee-review-datepicker {
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.employee-review-datepicker .ui-state-active {
+	background: #00cc00;
+	color: #fff;
+	font-weight: 700;
+}
+
+
+.user-review-note {
+	min-width: 700px;
+}
+
+.admin-review-note {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-size: 1.0em;
+	max-width: 300px;
+}
+
+
+.review-save-message {
+	margin-top: 15px;
+}
+
+
+.reviewed-select {
+	min-width: 80px;
+}
+
+
+.missed-review, .missed-review .report-cell {
+	background: #ff4e4e !important;
+}
+
+#ip-address-col {
+	min-width: 170px;
+}
+
+
+
+
+/* Media Styles */
+
+@media (max-width: 1248px) {
+	#user-table-div {
+		overflow-x: auto;
+	}
+}
+
+@media (max-height: 640px) {
+	#user-table-div {
+		overflow-y: auto;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	#login-header {
+		font-size: 3.2em;
+		width: 100%;
+	    -webkit-text-stroke-width: 2.0px;
+	}
+
+	#remote-mode-header {
+		font-size: 1.2em;
+	}
+
+	#remote-mode-top-message {
+		font-size: 0.8em;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#login-header {
+		font-size: 2.7em;
+		width: 100%;
+	    -webkit-text-stroke-width: 2.0px;
+	}
+}
+
+@media (max-width: 800px) {
+	#company-settings-modal .modal-dialog {
+		width: 90%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	#login-header {
+		font-size: 2.3em;
+		width: 100%;
+	    -webkit-text-stroke-width: 1.8px;
+	}
+
+	.thumbnail {
+		margin-top: 0px;
+		height: 20px;
+	}
+
+	.thumbnail span {
+		display: none;
+	}
+
+	.thumbnail h3 {
+		position: relative;
+		top: -20px;
+		font-size: 1.0em;
+	}
+
+	.col-xs-12:first-child {
+		margin-top: 10px;
+	}
+
+	.col-xs-12 {
+		height: 30px;
+	}
+
+	#remote-mode-container {
+		height: 100%;
+		max-height: 100%;
+	}
+
+	#remote-mode-container .row {
+		width: 115%;
+	}
+
+	#title-col {
+		display: none;
+		width: 200px;
+	}
+
+	#remote-mode-col {
+		width: 100%;
+	}
+
+	#remote-mode-header {
+		font-size: 1.0em;
+	}
+
+	#company-ip-address-row {
+		margin-top: 50px;
+	}
+
+	.user-review-note {
+		min-width: 200px;
+	}
+}
+
+@media (min-width: 513px) and (max-width: 767px) {
+	#login-header {
+		text-align: center;
+		width: 60%;
+	}
+
+	#login-header, #login {
+		margin: 0px auto;
+		margin-right: 30px;
+	}
+
+	#message-board-textarea {
+		height: 50px;
+	}
+
+	#opinion-board-textarea {
+		height: 50px;
+	}
+
+	#warning-messages-row {
+	    height: 300px;
+	}
+
+	#request-personal-time-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#request-personal-time-datepicker {
+		margin-left: 50px;
+	}
+
+	#request-personal-time-time-row {
+		height: 120px;
+	}
+
+	#request-personal-time-note-label-row {
+		height: 50px;
+	}
+
+	#request-personal-time-note-row {
+		height: 170px;
+	}
+}
+
+@media (max-width: 512px) {
+	#login {
+		width: 300px;
+	}
+
+	#remote-mode-container .row {
+		width: 140%;
+	}
+
+	#user-table {
+		font-size: 0.8em;
+	}
+
+	#avg-start-time-message {
+		font-size: 1.4em;
+	}
+
+	thead tr td {
+		font-size: 0.9em;
+	}
+
+	.table-total h3 {
+		font-size: 1.2em;
+	}
+
+	#clock-out-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#view-history-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#change-day-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#change-week-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#change-user-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#view-report-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#edit-time-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#edit-vacation-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#edit-holiday-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#edit-personal-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#edit-sick-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#account-settings-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#add-user-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#message-board-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#opinion-board-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#ip-address-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#request-personal-time-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#request-personal-time-time-row {
+		height: 120px;
+	}
+
+	#request-personal-time-note-label-row {
+		height: 50px;
+	}
+
+	#request-personal-time-note-row {
+		height: 170px;
+	}
+
+	#request-vacation-time-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#warning-messages-modal .modal-dialog {
+		width: 90%;
+	}
+
+	#warning-messages-row {
+	    height: 380px;
+	}
+
+	#request-personal-time-datepicker {
+		margin-left: 0px;
+	}
+
+	#request-vacation-time-datepicker {
+		margin-left: 0px;
+	}
+
+	#message-board-textarea {
+		height: 50px;
+	}
+
+	#opinion-board-textarea {
+		height: 50px;
+	}
+
+	.modal-title {
+		font-size: 1.0em;
+	}
+
+	.col-radio {
+		width: 10%;
+	}
+
+	.col-label {
+		width: 70%;
+	}
+
+	.modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	.label-md h4 {
+		font-size: 0.9em;
+	}
+
+	.modal-footer button {
+		position: relative;
+		left: -15px;
+	}
+}
+
+@media (max-height: 450px) {
+	#view-history-row {
+		height: 40%;
+	}
+
+	#change-day-row {
+		height: 40%;
+	}
+
+	#change-week-row {
+		height: 40%;
+	}
+
+	#change-user-row {
+		height: 40%;
+	}
+
+	#view-report-row {
+		height: 40%;
+	}
+
+	#request-personal-time-row {
+		height: 40%;
+	}
+
+	#request-vacation-time-row {
+		height: 40%;
+	}
+
+	.employee-review-datepicker {
+		font-size: 13px;
+	}
+}
+
+@media (min-height: 1px) and (max-height: 450px) {
+	#change-user-row {
+		max-height: 100px;
+	}
+
+	#view-report-row {
+		max-height: 100px;
+	}
+}
+
+
+@media (max-width: 284px) {
+	#warning-messages-row {
+	    height: 530px;
+	}
+
+	.warning-alert-text {
+		font-size: 0.9em;
+	}
+}
+
+@media (max-width: 259px) {
+	#ip-address-text-title-label {
+		font-size: 0.8em;
+	}
+}
+
+@media (max-width: 240px) {
+	#company-ip-address-row {
+		margin-top: 120px;
+	}
+}
+
+@media (max-width: 217px) {
+	#header-title a {
+		font-size: 0.4em;
+	}
+}
+
+@media (max-width: 202px) {
+	#remote-mode-container .row {
+		width: 150%;
+	}
+}
+
+@media (max-width: 200px) {
+	#view-history-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	#change-day-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	#change-week-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	#change-user-modal .modal-label h4 {
+		font-size: 0.8em;
+	}
+
+	#view-report-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#edit-time-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#edit-vacation-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#edit-holiday-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#edit-personal-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#edit-sick-modal .modal-label h4 {
+		font-size: 0.7em;
+	}
+
+	#request-personal-time-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	#request-vacation-time-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	#warning-messages-modal .modal-dialog {
+		height: 80%;
+	}
+
+	#warning-messages-modal .modal-label h4 {
+		font-size: 0.6em;
+	}
+
+	.warning-alert-text {
+		font-size: 0.8em;
+	}
+}
+
+@media (max-width: 189px) {
+	#change-user-modal .col-label {
+		width: 40%;
+	}
+
+	#change-user-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#edit-time-modal .col-label {
+		width: 40%;
+	}
+
+	#edit-time-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#edit-vacation-modal .col-label {
+		width: 40%;
+	}
+
+	#edit-vacation-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#edit-holiday-modal .col-label {
+		width: 40%;
+	}
+
+	#edit-holiday-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#edit-personal-modal .col-label {
+		width: 40%;
+	}
+
+	#edit-personal-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#edit-sick-modal .col-label {
+		width: 40%;
+	}
+
+	#edit-sick-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	#warning-messages-modal .modal-label h4 {
+		font-size: 0.5em;
+	}
+
+	.warning-alert-text {
+		font-size: 0.6em;
+	}
+}
+
+
+/** Printing Styles **/
+
+@media print {
+
+	@page {
+		size: landscape;
+	}
+
+	.no-print {
+	    display: none;
+	}
+
+	#user-table-div {
+		max-width: 880px;
+		max-height: 600px;
+	}
+
+	#user-table {
+		font-size: 0.8em;
+	}
+
+	thead tr td {
+		font-size: 0.9em;
+		height: 30px;
+	}
+
+	tbody tr {
+		height: 35px;
+	}
+
+	tbody tr td {
+		height: 30px;
+	}
+
+	.table-total {
+		height: 50px;
+	}
+
+	.table-total h3 {
+		font-size: 1.2em;
+	}
+
+	.table tr:nth-child(even) {
+		background-color: #000 !important;
+    }
+}
+
+
+
